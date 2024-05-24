@@ -821,3 +821,18 @@ body {
     font-size: 2rem;
 }
 
+#github {
+    position: fixed;
+    bottom: 25px;
+    left: 20px;
+    z-index: 9999;
+}
+
+#github a {
+    color: var(--accentColor);
+    text-decoration: none;
+}
+
+#github i {
+    font-size: 2rem;
+}
