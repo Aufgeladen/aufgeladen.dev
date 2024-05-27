@@ -823,3 +823,31 @@ body {
     font-size: 2rem;
 }
 
+/* Stil für das YouTube-Video unsichtbar machen */
+#youtube-video {
+    width: 0;
+    height: 0;
+    border: 0;
+  }
+  
+  /* Stil für den Stummschalt-Button */
+  #mute-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    color: var(--accentColor);
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000; /* Sicherstellen, dass der Button über anderen Elementen angezeigt wird */
+  }
+  
+  #mute-button:focus {
+    outline: none;
+  }
+  
+  #mute-button:hover {
+    color: var(--bgColor);
+  }
+  
