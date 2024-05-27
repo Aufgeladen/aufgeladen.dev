@@ -19,7 +19,7 @@
     <div id="stars3"></div>
   </section>
   <!-- End of Parallax Pixel Background Animation -->
-<!--btw you dont have to skid this its a open source project by https://github.com/johnggli/linktree licensed under mit-->
+  <!--btw you dont have to skid this its a open source project by https://github.com/johnggli/linktree licensed under mit-->
   <a id="profilePicture" href="#popup">
     <img src="https://cdn.aufge1aden.de/f659fc84675092bb2284fd2c39413616.png" alt="Profile Picture">
   </a>
@@ -29,9 +29,7 @@
       <div class="popup-photo">
         <iframe src="https://lanyard.cnrad.dev/api/747927665729732708" width="400" height="210"></iframe>
       </div>
-      <div class="popup-quote">
-
-      </div>
+      <div class="popup-quote"></div>
       <a class="popup-close" onclick="history.back()">&times;</a>
     </div>
   </div>
@@ -39,42 +37,40 @@
   <div id="userName">
     Aufgeladen
   </div>
-<div id="links">
-  <a class="link" href="https://www.tiktok.com/@aufgeladen" target="_blank">
-    <i class="fab fa-tiktok"></i> Tiktok
-  </a>
-  <a class="link" href="https://github.com/aufgeladen" target="_blank">
-    <i class="fab fa-github"></i> Github
-  </a>
-  <a class="link" href="https://twitter.com/Aufge1aden" target="_blank">
-    <i class="fab fa-twitter"></i> Twitter
-  </a>
-  <a class="link" href="https://discord.com/users/747927665729732708" target="_blank">
-    <i class="fab fa-discord"></i> Discord
-  </a>
-  <a class="link" href="https://www.youtube.com/@aufgeladen" target="_blank">
-    <i class="fab fa-youtube"></i> Youtube
-  </a>
-  <a class="link" href="https://discord.gg/q9uRZuUA4S" target="_blank">
-    <i class="fas fa-gamepad"></i> Project ElixirFN
-  </a>
-  <a class="link" href="https://discord.gg/TDVb7Ant" target="_blank">
-    <i class="fas fa-gamepad"></i> Project EuractFN
-  </a>
-  <a class="link" href="https://temu.to/m/u3khpurzh96" target="_blank">
-    <i class="fas fa-link"></i> Temu 20% off #AD
-  </a>
-  <a class="link" href="https://paypal.me/aufgeladen" target="_blank">
-    <i class="fab fa-paypal"></i> Paypal
-  </a>
-  <a class="link" href="mailto:aufgeladen@aufgeladen.dev" target="_blank">
-    <i class="fa-regular fa-envelope"></i> Email
-  </a>
-  <a class="link" href="https://cdn.aufge1aden.de/era.html" target="_blank">
-    <i class="fab fa-youtube"></i> What happened to era
-  </a>
-  
-  
+  <div id="links">
+    <a class="link" href="https://www.tiktok.com/@aufgeladen" target="_blank">
+      <i class="fab fa-tiktok"></i> Tiktok
+    </a>
+    <a class="link" href="https://github.com/aufgeladen" target="_blank">
+      <i class="fab fa-github"></i> Github
+    </a>
+    <a class="link" href="https://twitter.com/Aufge1aden" target="_blank">
+      <i class="fab fa-twitter"></i> Twitter
+    </a>
+    <a class="link" href="https://discord.com/users/747927665729732708" target="_blank">
+      <i class="fab fa-discord"></i> Discord
+    </a>
+    <a class="link" href="https://www.youtube.com/@aufgeladen" target="_blank">
+      <i class="fab fa-youtube"></i> Youtube
+    </a>
+    <a class="link" href="https://discord.gg/q9uRZuUA4S" target="_blank">
+      <i class="fas fa-gamepad"></i> Project ElixirFN
+    </a>
+    <a class="link" href="https://discord.gg/TDVb7Ant" target="_blank">
+      <i class="fas fa-gamepad"></i> Project EuractFN
+    </a>
+    <a class="link" href="https://temu.to/m/u3khpurzh96" target="_blank">
+      <i class="fas fa-link"></i> Temu 20% off #AD
+    </a>
+    <a class="link" href="https://paypal.me/aufgeladen" target="_blank">
+      <i class="fab fa-paypal"></i> Paypal
+    </a>
+    <a class="link" href="mailto:aufgeladen@aufgeladen.dev" target="_blank">
+      <i class="fa-regular fa-envelope"></i> Email
+    </a>
+    <a class="link" href="https://cdn.aufge1aden.de/era.html" target="_blank">
+      <i class="fab fa-youtube"></i> What happened to era
+    </a>
   </div>
 
   <div id="hashtag">
@@ -88,5 +84,48 @@
     </a>
   </div>
 
+  <!-- YouTube Livestream Audio Section -->
+  <div id="audio-controls">
+    <iframe id="youtube-video" src="https://www.youtube.com/embed/oWW5TLrrbNo?enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <button id="mute-button">
+      <i class="fas fa-volume-mute"></i>
+    </button>
+  </div>
+
+  <script>
+    // YouTube API bereitstellen
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('youtube-video', {
+        events: {
+          'onReady': onPlayerReady
+        }
+      });
+    }
+
+    function onPlayerReady(event) {
+      // Initial stummgeschaltet und nicht gestartet
+      event.target.mute();
+      event.target.stopVideo();
+    }
+
+    // Stummschalt-Button Funktionalität
+    document.getElementById('mute-button').addEventListener('click', function() {
+      if(player.isMuted()) {
+        player.unMute();
+        player.playVideo();
+        this.innerHTML = '<i class="fas fa-volume-mute"></i>';
+      } else {
+        player.mute();
+        player.stopVideo();
+        this.innerHTML = '<i class="fas fa-volume-up"></i>';
+      }
+    });
+  </script>
 </body>
 </html>
