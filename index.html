@@ -73,14 +73,12 @@
     FUCK EPIC GAMES
   </div>
 
-  
   <div id="questionButton">
     <a href="https://github.com/Aufgeladen/aufgeladen.github.io/tree/main" title="source">
       <i class="fab fa-github"></i>
     </a>
   </div>
 
-  
   <div id="audio-controls">
     <iframe id="youtube-video" src="https://www.youtube.com/embed/oWW5TLrrbNo?enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     <button id="mute-button">
@@ -88,8 +86,12 @@
     </button>
   </div>
 
+  <!-- temp warning -->
+  <div id="warning-message">
+    ⚠️ Audio not working on mobile devices ⚠️
+  </div>
+
   <script>
-    
     var tag = document.createElement('script');
     tag.src = "https://www.youtube.com/iframe_api";
     var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -105,12 +107,10 @@
     }
 
     function onPlayerReady(event) {
-      
       event.target.mute();
       event.target.stopVideo();
     }
 
-    
     document.getElementById('mute-button').addEventListener('click', function() {
       if(player.isMuted()) {
         player.unMute();
