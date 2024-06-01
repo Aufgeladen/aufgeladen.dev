@@ -16,7 +16,7 @@ body {
     min-height: 100vh;
     font-family: var(--font);
     background: radial-gradient(ellipse at bottom, var(--bgColor) 0%, var(--bgColor2) 100%);
-    /* background-image: url('https://export-download.canva.com/aGG8U/DAGENMaGG8U/2/0/0001-6053264734614183608.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJHKNGJLC2J7OGJ6Q%2F20240503%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240503T202011Z&X-Amz-Expires=8794&X-Amz-Signature=9aee8b1d1ebda228102fa95e83e2a91d04d2bef493f4b0fbdc48fc0018996e44&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27Untitled%2520design.png&response-expires=Fri%2C%2003%20May%202024%2022%3A46%3A45%20GMT'); */
+    /* background-image: url('https://export-download.canva.com/aGG8U/DAGENMaGG8U/2/0/0001-6053264734614183608.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJHKNGJLC2J7OGJ6Q%2F20240503%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240503T202011Z&X-Amz-Expires=8794&X-Amz-Signature=9aee8b1d1ebda228102fa95e83e2a91d04d2bef493f4b0fbdc48fc0018996e44&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27Untitled%2520design.png&response-expires=Fri%2C%2003%20May%202024%2022%3A46%3A45%20GMT') */
     opacity: 0;
     animation: 1s ease-out var(--delay) 1 transitionAnimation; /* duration/timing-function/delay/iterations/name */
     animation-fill-mode: forwards;
