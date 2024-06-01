@@ -822,30 +822,3 @@ body {
 #questionButton i {
     font-size: 2rem;
 }
-
-#youtube-video {
-    width: 0;
-    height: 0;
-    border: 0;
-  }
-  
-  #mute-button {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background-color: transparent;
-    border: none;
-    color: var(--accentColor);
-    font-size: 1.5rem;
-    cursor: pointer;
-    z-index: 1000;
-  }
-  
-  #mute-button:focus {
-    outline: none;
-  }
-  
-  #mute-button:hover {
-    color: var(--bgColor);
-  }
-  

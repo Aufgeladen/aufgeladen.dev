@@ -76,7 +76,7 @@
   </div>
 
   <div id="hashtag">
-    FUCK EPIC GAMES
+    Heyyy
   </div>
 
   <div id="questionButton">
@@ -85,44 +85,5 @@
     </a>
   </div>
 
-  <div id="audio-controls">
-    <iframe id="youtube-video" src="https://www.youtube.com/embed/oWW5TLrrbNo?enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    <button id="mute-button">
-      <i class="fas fa-volume-mute"></i>
-    </button>
-  </div>
-
-  <script>
-    var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    var player;
-    function onYouTubeIframeAPIReady() {
-      player = new YT.Player('youtube-video', {
-        events: {
-          'onReady': onPlayerReady
-        }
-      });
-    }
-
-    function onPlayerReady(event) {
-      event.target.mute();
-      event.target.stopVideo();
-    }
-
-    document.getElementById('mute-button').addEventListener('click', function() {
-      if(player.isMuted()) {
-        player.unMute();
-        player.playVideo();
-        this.innerHTML = '<i class="fas fa-volume-mute"></i>';
-      } else {
-        player.mute();
-        player.stopVideo();
-        this.innerHTML = '<i class="fas fa-volume-up"></i>';
-      }
-    });
-  </script>
 </body>
 </html>
