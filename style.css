@@ -822,3 +822,12 @@ body {
 #questionButton i {
     font-size: 2rem;
 }
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    position: fixed; 
+    bottom: 0;
+    width: 100%;
+}
