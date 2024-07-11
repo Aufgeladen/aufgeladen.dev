@@ -4,3 +4,6 @@ https://github.com/johnggli/linktree
 
 half spaghetti code half fork linktree idk 
 https://aufgeladen.dev
+
+
+https://license.aufgeladen.dev
