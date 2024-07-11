@@ -825,7 +825,7 @@ body {
 
 footer {
     text-align: center;
-    padding: 1rem;
+    padding: none;
     color: white;
     position: fixed; 
     bottom: 0;
